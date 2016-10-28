@@ -1,0 +1,64 @@
+<div id="page-heading">
+	<ol class="breadcrumb">
+		<li><a href="#/">Dashboard</a></li>
+		<li>Extras</li>
+	</ol>
+
+	<h1>Blank</h1>
+	<div class="options">
+        <div class="btn-toolbar">
+            <div class="btn-group" dropdown>
+                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle>
+                    Export as <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-default hidden-xs"><i class="glyphicon glyphicon-cog"></i></a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+
+	<div class="panel panel-default">
+		<!-- <div class="panel-heading">
+			<h4>Invoice</h4>
+		</div> -->
+		<div class="panel-body">
+	
+
+			<form name="formPhone" ng-submit="$ctrl.update()">
+				<button type="submit" class="btn btn-primary" ng-disabled="formPhone.$invalid">Guardar</button>
+				<div ng-repeat="(key,value) in $ctrl.phone ">
+					<ng-form name="formChild">
+						<div class="form-group" ng-if="$ctrl.metaFields[key].showInForm">
+							<label for="item">{{$ctrl.metaFields[key].name}}</label>
+							
+							<input ng-if="$ctrl.metaFields[key].type!='textarea'" type="{{$ctrl.metaFields[key].type}}" name="item" ng-model="$ctrl.phone[key]" class="form-control" ng-required="$ctrl.metaFields[key].required" >
+							
+							<textarea ng-if="$ctrl.metaFields[key].type=='textarea'" cols="150" rows="3" type="{{$ctrl.metaFields[key].type}}" name="item" ng-model="$ctrl.phone[key]" class="form-control" ng-required="$ctrl.metaFields[key].required" ></textarea>
+							
+							<div class="help-block" style="color:red" ng-messages="formChild.item.$error">
+								<div ng-messages-include="messages.html"></div>
+							</div>
+							
+						</div>
+					</ng-form>
+				</div>
+				<button type="submit" class="btn btn-primary" ng-disabled="formPhone.$invalid">Guardar</button>
+			</form>
+		</div>
+	</div>
+	
+
+		
+	
+
+
+
+</div> <!-- container-fluid -->

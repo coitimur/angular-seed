@@ -1,0 +1,44 @@
+<nav class="static-sidebar" role="navigation">
+	<ul id="sidebar" sticky-scroll="50">
+	  <li id="search" ng-cloak>
+		<a href="">
+			<i class="fa fa-binoculars opacity-control"></i>
+		</a>
+		<form
+		ng-click="$event.stopPropagation()"
+		ng-submit="$ctrl.nav.goToSearch()">
+			<input type="text" ng-model="$ctrl.nav.searchQuery" class="search-query" placeholder="Buscar ..." />
+			<button type="submit" ng-click="$ctrl.nav.goToSearch()"><i class="fa fa-binoculars"></i></button>
+		</form>
+	  </li>
+	  <li ng-repeat="item in $ctrl.nav.menu"
+		  ng-class="{ hasChild: (item.children!==undefined),
+						active: item.selected,
+						  open: (item.children!==undefined) && item.open,
+			   'nav-separator': item.separator==true,
+				'search-focus': ($ctrl.nav.searchQuery.length>0 && item.selected) }" 
+			ng-show="!($ctrl.nav.searchQuery.length && !item.selected)"
+		  ng-include="'template_nav_renderer'"
+		></li>
+	</ul>
+</nav> <!-- #sidebar-->
+
+<script type="text/ng-template" id="template_nav_renderer">
+		<div ng-if="item.separator==true">
+			<span>{{item.label}}</span>
+		</div>
+		<a ng-if="!item.separator" ng-click="$ctrl.nav.select(item)" ng-href="{{item.url}}">
+			<i ng-if="item.iconClasses" class="{{item.iconClasses}}"></i><span>{{item.label}}</span>
+			<span ng-bind-html="item.html"></span>
+		</a>
+		<ul ng-if="item.children.length" data-slide-out-nav="item.open || ($ctrl.nav.searchQuery.length>0 && item.selected)">
+			<li ng-repeat="item in item.children"
+				ng-class="{ hasChild: (item.children!==undefined),
+							  active: item.selected,
+								open: (item.children!==undefined) && item.open,
+					  'search-focus': ($ctrl.nav.searchQuery.length>0 && item.selected) }"
+				ng-show="!($ctrl.nav.searchQuery.length>0 && !item.selected)"
+				ng-include="'template_nav_renderer'"
+			></li>
+		</ul>
+</script>

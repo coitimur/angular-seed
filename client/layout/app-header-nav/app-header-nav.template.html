@@ -1,0 +1,34 @@
+
+		<div class="nav">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<i class="fa fa-reorder"></i>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse" ng-class="{'large-icons-nav': getLayoutOption('layoutHorizontalLargeIcons')}" id="horizontal-navbar">
+			  <ul id="top-nav" class="nav navbar-nav">
+				  <li ng-repeat="item in $ctrl.nav.menu"
+					  ng-if="!item.hideOnHorizontal"
+					  ng-class="{ hasChild: (item.children!==undefined),
+									active: item.selected,
+									  open: (item.children!==undefined) && item.open,
+						   'nav-separator': item.separator==true }"
+					  ng-include="'template_nav_renderer_horizontal'"
+					></li>
+			  </ul>
+		</div>
+		
+		<script type="text/ng-template" id="template_nav_renderer_horizontal">
+			<a ng-click="$ctrl.nav.select(item)" ng-href="{{item.url}}">
+			  <i ng-if="item.iconClasses" class="{{item.iconClasses}}"></i><span>{{item.label}}</span>
+			  <span ng-bind-html="item.html"></span>
+			</a>
+			<ul ng-if="item.children.length">
+				<li ng-repeat="item in item.children"
+				  ng-class="{ hasChild: (item.children!==undefined),
+								  active: item.selected,
+									open: (item.children!==undefined) && item.open }"
+				  ng-include="'template_nav_renderer_horizontal'"
+				></li>
+			</ul>
+		</script>
+	

@@ -1,0 +1,71 @@
+{
+  "name": "angular-seed",
+  "version": "0.0.0",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "chai": "^3.5.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "cross-env": "^3.1.3",
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+    "express-device": "^0.4.2",
+    "express-session": "^1.13.0",
+    "fs": "0.0.2",
+    "gm": "^1.22.0",
+    
+    "lodash": "~2.4.0",
+    "lodash-node": "^3.10.2",
+    "logger": "0.0.1",
+    "make": "0.0.0",
+    "moment": "^2.13.0",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "path": "^0.12.7",
+    "pg": "4.5.3",
+    "q": ""
+  },
+  "devDependencies": {
+     "bower": "latest",
+    "grunt": "~0.4.1",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-autoprefixer": "~0.4.0",
+    "grunt-bower-install": "~1.0.0",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-less": "^0.11.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-include-source": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+	"grunt-exec": "^1.0.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-google-cdn": "~0.2.0",
+    "grunt-newer": "~0.6.1",
+    "grunt-ngmin": "~0.0.2",
+    "grunt-rev": "~0.1.0",
+    "grunt-svgmin": "~0.2.0",
+    "grunt-usemin": "~2.0.0",
+    "jshint-stylish": "~0.1.3",
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.2.1",
+    "grunt-angular-templates": "^0.5.5",
+    "grunt-processhtml": "^0.3.3"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "scripts": {
+    
+    "prestart:dev": "npm install && bower install",
+    "start:dev": "cross-env NODE_ENV=dev  grunt dev",
+    "prestart:dist": "npm install && bower install",
+    "start:dist": "cross-env NODE_ENV=dist  grunt dist",
+    "pretest": "npm install"
+  }
+}

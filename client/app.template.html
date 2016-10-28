@@ -1,0 +1,66 @@
+<div id="app"
+	class="{{getLayoutOption('sidebarThemeClass')}} {{getLayoutOption('topNavThemeClass')}}" 
+	  ng-class="{
+				  'static-header': !getLayoutOption('fixedHeader'),
+				  'focusedform': getLayoutOption('fullscreen'),
+				  'layout-horizontal': getLayoutOption('layoutHorizontal'),
+				  'fixed-layout': getLayoutOption('layoutBoxed'),
+				  'sidebar-collapsed': getLayoutOption('leftbarCollapsed') && !getLayoutOption('leftbarShown'),
+				  'show-infobar': getLayoutOption('rightbarCollapsed'),
+				  'show-sidebar': getLayoutOption('leftbarShown')
+				}"
+	  ng-click="hideHeaderBar();hideChatBox()"
+	  animate-page-content
+	  faux-offcanvas
+	  to-top-on-load
+>	
+	
+	<style>
+	.dropdown.open .dropdown-menu.animated {
+		-webkit-animation-name: {{getLayoutOption('dropdownTransitionStyle')}};
+		animation-name: {{getLayoutOption('dropdownTransitionStyle')}};
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+	}
+	.dropdown-menu.animated {
+		-webkit-animation-name: none;
+		animation-name: none;
+	}
+
+	.mainview-animation.animated.ng-enter {
+		-webkit-animation-name: {{getLayoutOption('pageTransitionStyle')}};
+		animation-name: {{getLayoutOption('pageTransitionStyle')}};
+	}
+</style>
+
+	<app-header></app-header>
+	
+	<app-header-bar></app-header-bar>
+	
+	<nav id="headernav" class="navbar ng-hide" role="navigation" ng-show="getLayoutOption('layoutHorizontal') && !layoutLoading">
+		<app-header-nav></app-header-nav>
+	</nav>
+
+
+	<div id="wrapper">
+		<div id="layout-static">
+			<div class="static-sidebar-wrapper" ng-show="!layoutLoading">
+				<app-side-bar></app-side-bar>
+			</div>
+			<div class="static-content-wrapper">
+				<div class="static-content">
+					<div id="wrap" ng-view="" class="mainview-animation animated">
+					</div>
+				</div>
+				<footer role="contentinfo" ng-show="!layoutLoading" ng-cloak>
+					<app-footer></app-footer>
+				</footer>
+			</div>
+		</div>
+	</div>
+	
+    <app-info-bar></app-info-bar>
+
+	
+	
+</div>

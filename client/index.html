@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Angular-Seed</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="angular-seed">
+	<meta name="author" content="">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- build:css assets/css/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css" />
+		<link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css" />
+		<link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
+		<link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
+		<link rel="stylesheet" href="bower_components/iCheck/skins/all.css" />
+		<link rel="stylesheet" href="bower_components/pnotify/pnotify.core.css" />
+		<link rel="stylesheet" href="bower_components/pnotify/pnotify.buttons.css" />
+		<link rel="stylesheet" href="bower_components/pnotify/pnotify.history.css" />
+		<link rel="stylesheet" href="bower_components/nanoscroller/bin/css/nanoscroller.css" />
+		<link rel="stylesheet" href="bower_components/textAngular/src/textAngular.css" />
+		<link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+		<link rel="stylesheet" href="bower_components/switchery/dist/switchery.css" />
+		<link rel="stylesheet" href="bower_components/ng-sortable/dist/ng-sortable.css" />
+		<link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css" />
+		<link rel="stylesheet" href="bower_components/angular-meditor/dist/meditor.min.css" />
+		<link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+		<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+		<link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+		<link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css" />
+		<link rel="stylesheet" href="bower_components/skylo/vendor/styles/skylo.css" />
+		<link rel="stylesheet" href="bower_components/bootstrap-datepaginator/dist/bootstrap-datepaginator.min.css" />
+		<link rel="stylesheet" href="bower_components/jcrop/css/Jcrop.css" />
+		<!-- endbower -->
+		
+		<link rel='stylesheet' type='text/css' href='assets/fonts/glyphicons/css/glyphicons.min.css' /> 
+		<link rel='stylesheet' type='text/css' href='assets/plugins/form-fseditor/fseditor.css' /> 
+		<link rel='stylesheet' type='text/css' href='assets/plugins/jcrop/css/jquery.Jcrop.min.css' /> 
+	<!-- endbuild -->
+
+	<!-- build:css assets/css/main.css -->
+		<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+	<!-- endbuild -->
+
+</head>
+
+<body  ng-app="app">
+
+
+    <app></app>
+
+	<script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyCXW8tVVmP3rOrsDHsqEFOhXQS0QjK0Zng'></script>
+
+	<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/es5-shim/es5-shim.js"></script>
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/lodash/lodash.js"></script>
+		<script src="bower_components/underscore/underscore.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/ng-storage/ngStorage.js"></script>
+		<script src="bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/jquery.ui/ui/jquery.ui.core.js"></script>
+		<script src="bower_components/jquery.ui/ui/jquery.ui.widget.js"></script>
+		<script src="bower_components/jquery.ui/ui/jquery.ui.mouse.js"></script>
+		<script src="bower_components/jquery.ui/ui/jquery.ui.draggable.js"></script>
+		<script src="bower_components/jquery.ui/ui/jquery.ui.resizable.js"></script>
+		<script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+		<script src="bower_components/flot/jquery.flot.js"></script>
+		<script src="bower_components/flot/jquery.flot.stack.js"></script>
+		<script src="bower_components/flot/jquery.flot.pie.js"></script>
+		<script src="bower_components/flot/jquery.flot.resize.js"></script>
+		<script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+		<script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+		<script src="bower_components/moment/moment.js"></script>
+		<script src="bower_components/jqvmap/dist/jquery.vmap.js"></script>
+		<script src="bower_components/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+		<script src="bower_components/ng-grid/build/ng-grid.js"></script>
+		<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+		<script src="bower_components/iCheck/icheck.min.js"></script>
+		<script src="bower_components/google-code-prettify/src/prettify.js"></script>
+		<script src="bower_components/bootbox.js/bootbox.js"></script>
+		<script src="bower_components/jquery-autosize/jquery.autosize.js"></script>
+		<script src="bower_components/gmaps/gmaps.js"></script>
+		<script src="bower_components/jquery.pulsate/jquery.pulsate.js"></script>
+		<script src="bower_components/jquery.knob/js/jquery.knob.js"></script>
+		<script src="bower_components/jquery.sparkline/index.js"></script>
+		<script src="bower_components/flow.js/dist/flow.js"></script>
+		<script src="bower_components/ng-flow/dist/ng-flow.js"></script>
+		<script src="bower_components/enquire/dist/enquire.js"></script>
+		<script src="bower_components/shufflejs/dist/jquery.shuffle.js"></script>
+		<script src="bower_components/pnotify/pnotify.core.js"></script>
+		<script src="bower_components/pnotify/pnotify.buttons.js"></script>
+		<script src="bower_components/pnotify/pnotify.callbacks.js"></script>
+		<script src="bower_components/pnotify/pnotify.confirm.js"></script>
+		<script src="bower_components/pnotify/pnotify.desktop.js"></script>
+		<script src="bower_components/pnotify/pnotify.history.js"></script>
+		<script src="bower_components/pnotify/pnotify.nonblock.js"></script>
+		<script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
+		<script src="bower_components/angular-nanoscroller/scrollable.js"></script>
+		<script src="bower_components/rangy/rangy-core.js"></script>
+		<script src="bower_components/rangy/rangy-classapplier.js"></script>
+		<script src="bower_components/rangy/rangy-highlighter.js"></script>
+		<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+		<script src="bower_components/rangy/rangy-serializer.js"></script>
+		<script src="bower_components/rangy/rangy-textrange.js"></script>
+		<script src="bower_components/textAngular/src/textAngular.js"></script>
+		<script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
+		<script src="bower_components/textAngular/src/textAngularSetup.js"></script>
+		<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+		<script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+		<script src="bower_components/transitionize/dist/transitionize.js"></script>
+		<script src="bower_components/fastclick/lib/fastclick.js"></script>
+		<script src="bower_components/switchery/dist/switchery.js"></script>
+		<script src="bower_components/ng-switchery/src/ng-switchery.js"></script>
+		<script src="bower_components/ng-sortable/dist/ng-sortable.js"></script>
+		<script src="bower_components/angular-meditor/dist/meditor.min.js"></script>
+		<script src="bower_components/angular-ui-select/dist/select.js"></script>
+		<script src="bower_components/skycons/skycons.js"></script>
+		<script src="bower_components/angular-skycons/angular-skycons.js"></script>
+		<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+		<script src="bower_components/d3/d3.js"></script>
+		<script src="bower_components/nvd3/nv.d3.js"></script>
+		<script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+		<script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+		<script src="bower_components/skylo/vendor/scripts/skylo.js"></script>
+		<script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="bower_components/jquery.easy-pie-chart/dist/angular.easypiechart.js"></script>
+		<script src="bower_components/bootstrap-datepaginator/dist/bootstrap-datepaginator.min.js"></script>
+		<script src="bower_components/velocity/velocity.js"></script>
+		<script src="bower_components/velocity/velocity.ui.js"></script>
+		<script src="bower_components/jcrop/js/Jcrop.js"></script>
+		<!-- endbower -->
+		
+		<script type='text/javascript' src='assets/plugins/form-colorpicker/js/bootstrap-colorpicker.min.js'></script> 
+		<script type='text/javascript' src='assets/plugins/form-fseditor/jquery.fseditor-min.js'></script> 
+		<script type='text/javascript' src='assets/plugins/form-jasnyupload/fileinput.min.js'></script> 
+		<script type='text/javascript' src='assets/plugins/flot/jquery.flot.spline.js'></script> 
+	<!-- endbuild -->
+	
+	<!-- build:js scripts/scripts.js -->
+		 <script src="app.component.js"></script>
+		 <script src="core/components/flot-charts/flot-charts.component.js"></script>
+		 <script src="core/components/task/task.component.js"></script>
+		 <script src="core/components/tiles/tiles.component.js"></script>
+		 <script src="core/components/vector-maps/vector-maps.component.js"></script>
+		 <script src="core/decorators/template_overrides.js"></script>
+		 <script src="core/directives/calendar.js"></script>
+		 <script src="core/directives/chart.canvas.js"></script>
+		 <script src="core/directives/chart.flot.js"></script>
+		 <script src="core/directives/chart.morris.js"></script>
+		 <script src="core/directives/chart.sparklines.js"></script>
+		 <script src="core/directives/form.js"></script>
+		 <script src="core/directives/gallery.js"></script>
+		 <script src="core/directives/gmaps.js"></script>
+		 <script src="core/directives/jqvmaps.js"></script>
+		 <script src="core/directives/ngDraggable.js"></script>
+		 <script src="core/directives/panels.js"></script>
+		 <script src="core/directives/templates.js"></script>
+		 <script src="core/directives/ui.js"></script>
+		 <script src="core/factories/model.factory.js"></script>
+		 <script src="core/services/services.js"></script>
+		 <script src="layout/app-footer/app-footer.component.js"></script>
+		 <script src="layout/app-header-bar/app-header-bar.component.js"></script>
+		 <script src="layout/app-header-nav/app-header-nav.component.js"></script>
+		 <script src="layout/app-header/app-header.component.js"></script>
+		 <script src="layout/app-info-bar/app-info-bar.component.js"></script>
+		 <script src="layout/app-side-bar/app-side-bar.component.js"></script>
+		 <script src="layout/messages.js"></script>
+		 <script src="layout/navigation.js"></script>
+		 <script src="layout/notifications.js"></script>
+		 <script src="layout/theme.js"></script>
+		 <script src="partials/calendar/calendar.component.js"></script>
+		 <script src="partials/charts-chartjs/charts-chartjs.component.js"></script>
+		 <script src="partials/charts-flot/charts-flot.component.js"></script>
+		 <script src="partials/charts-morris/charts-morris.component.js"></script>
+		 <script src="partials/charts-nvd3/charts-nvd3.component.js"></script>
+		 <script src="partials/charts-sparklines/charts-sparklines.component.js"></script>
+		 <script src="partials/extras-404/extras-404.component.js"></script>
+		 <script src="partials/extras-500/extras-500.component.js"></script>
+		 <script src="partials/extras-blank/extras-blank.component.js"></script>
+		 <script src="partials/extras-forgotpassword/extras-forgotpassword.component.js"></script>
+		 <script src="partials/extras-invoice/extras-invoice.component.js"></script>
+		 <script src="partials/extras-login/extras-login.component.js"></script>
+		 <script src="partials/extras-login2/extras-login2.component.js"></script>
+		 <script src="partials/extras-profile/extras-profile.component.js"></script>
+		 <script src="partials/extras-registration/extras-registration.component.js"></script>
+		 <script src="partials/extras-search/extras-search.component.js"></script>
+		 <script src="partials/extras-signupform/extras-signupform.component.js"></script>
+		 <script src="partials/extras-timeline2/extras-timeline2.component.js"></script>
+		 <script src="partials/form-components/form-components.component.js"></script>
+		 <script src="partials/form-fileupload/form-fileupload.component.js"></script>
+		 <script src="partials/form-imagecrop/form-imagecrop.component.js"></script>
+		 <script src="partials/form-layout/form-layout.component.js"></script>
+		 <script src="partials/form-masks/form-masks.component.js"></script>
+		 <script src="partials/form-validation/form-validation.component.js"></script>
+		 <script src="partials/form-wizard/form-wizard.component.js"></script>
+		 <script src="partials/form-wysiwyg/form-wysiwyg.component.js"></script>
+		 <script src="partials/form-xeditable/form-xeditable.component.js"></script>
+		 <script src="partials/gallery/gallery.component.js"></script>
+		 <script src="partials/home/home.component.js"></script>
+		 <script src="partials/icons-fontawesome/icons-fontawesome.component.js"></script>
+		 <script src="partials/icons-glyphicons/icons-glyphicons.component.js"></script>
+		 <script src="partials/layout-fixed/layout-fixed.component.js"></script>
+		 <script src="partials/layout-grid/layout-grid.component.js"></script>
+		 <script src="partials/layout-horizontal/layout-horizontal.component.js"></script>
+		 <script src="partials/layout-horizontal2/layout-horizontal2.component.js"></script>
+		 <script src="partials/maps-google/maps-google.component.js"></script>
+		 <script src="partials/maps-vector/maps-vector.component.js"></script>
+		 <script src="partials/phone-detail/phone-detail.component.js"></script>
+		 <script src="partials/phone-form/phone-form.component.js"></script>
+		 <script src="partials/phone-list/phone-list.component.js"></script>
+		 <script src="partials/tables-basic/tables-basic.component.js"></script>
+		 <script src="partials/tables-data/tables-data.component.js"></script>
+		 <script src="partials/tables-editable/tables-editable.component.js"></script>
+		 <script src="partials/tables-responsive/tables-responsive.component.js"></script>
+		 <script src="partials/tasks/tasks.component.js"></script>
+		 <script src="partials/ui-alerts/ui-alerts.component.js"></script>
+		 <script src="partials/ui-buttons/ui-buttons.component.js"></script>
+		 <script src="partials/ui-labelsbadges/ui-labelsbadges.component.js"></script>
+		 <script src="partials/ui-misc/ui-misc.component.js"></script>
+		 <script src="partials/ui-modals/ui-modals.component.js"></script>
+		 <script src="partials/ui-nestable/ui-nestable.component.js"></script>
+		 <script src="partials/ui-paginations/ui-paginations.component.js"></script>
+		 <script src="partials/ui-panels/ui-panels.component.js"></script>
+		 <script src="partials/ui-progressbars/ui-progressbars.component.js"></script>
+		 <script src="partials/ui-sliders/ui-sliders.component.js"></script>
+		 <script src="partials/ui-tabs/ui-tabs.component.js"></script>
+		 <script src="partials/ui-tiles/ui-tiles.component.js"></script>
+		 <script src="partials/ui-typography/ui-typography.component.js"></script>
+	<!-- endbuild -->
+	
+	
+</body>
+</html>
